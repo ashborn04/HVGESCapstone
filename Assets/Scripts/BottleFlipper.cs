@@ -10,11 +10,18 @@ public class BottleFlipper : MonoBehaviour
     private bool isRightClicked = false;
     private float clickTimeThreshold = 0.5f; // Time threshold for double-click
     private float lastClickTime = 0f;
+    AudioManager audioManager;
+     private void Awake()
+    {
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     void Update()
     {
+        
         if (Input.GetMouseButtonDown(0)) // Left mouse button
         {
+            
             if (Time.time - lastClickTime <= clickTimeThreshold)
             {
                 if (!isLeftClicked)
@@ -33,8 +40,10 @@ public class BottleFlipper : MonoBehaviour
             }
             lastClickTime = Time.time;
         }
-        else if (Input.GetMouseButtonDown(1)) // Right mouse button
+        else if (Input.GetMouseButtonDown(1)) 
+        // Right mouse button
         {
+            
             if (Time.time - lastClickTime <= clickTimeThreshold)
             {
                 if (!isRightClicked)
@@ -57,6 +66,7 @@ public class BottleFlipper : MonoBehaviour
 
     void FlipBottleLeft()
     {
+        audioManager.PlaySFX(audioManager.flipping);
         GetComponent<Rigidbody2D>().AddTorque(flipForce, ForceMode2D.Impulse);
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         GetComponent<Rigidbody2D>().AddForce(Vector2.left * flipForce, ForceMode2D.Impulse);
@@ -64,6 +74,7 @@ public class BottleFlipper : MonoBehaviour
 
     void FlipBottleRight()
     {
+        audioManager.PlaySFX(audioManager.flipping);
         GetComponent<Rigidbody2D>().AddTorque(-flipForce, ForceMode2D.Impulse);
         GetComponent<Rigidbody2D>().AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
         GetComponent<Rigidbody2D>().AddForce(Vector2.right * flipForce, ForceMode2D.Impulse);
