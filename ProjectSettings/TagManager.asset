@@ -7,6 +7,9 @@ TagManager:
   - Ground
   - MovingPlatform
   - MyBot
+  - Audio
+  - silver
+  - gold
   layers:
   - Default
   - TransparentFX

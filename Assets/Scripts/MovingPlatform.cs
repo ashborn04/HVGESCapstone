@@ -1,5 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
+
+
 using UnityEngine;
 
 public class MovingPlatform : MonoBehaviour
@@ -7,6 +9,7 @@ public class MovingPlatform : MonoBehaviour
     public float platformSpeed = 2f;
     public float platformRange = 3f;
     private bool isMovingRight = true;
+    private GameObject collidingObject;
 
     void Update()
     {
@@ -38,7 +41,8 @@ public class MovingPlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.SetParent(transform);
+            collidingObject = collision.gameObject;
+            collidingObject.transform.SetParent(transform);
         }
     }
 
@@ -46,7 +50,12 @@ public class MovingPlatform : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.SetParent(null);
+            Invoke("SetPlayerParentDelayed", 0.1f);
         }
+    }
+
+    void SetPlayerParentDelayed()
+    {
+        collidingObject.transform.SetParent(null);
     }
 }
