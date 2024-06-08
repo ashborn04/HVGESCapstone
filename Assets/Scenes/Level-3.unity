@@ -824,7 +824,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 21300000, guid: 64f15cffa3635fe49b176dbcb6789ad3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f8d3e13340f0f84da1177ac7f8289f3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -1711,6 +1711,10 @@ PrefabInstance:
     - target: {fileID: 4386355199880334985, guid: cd10c56892e536d4da8d3e21299ff5aa, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 5494279186752307119, guid: cd10c56892e536d4da8d3e21299ff5aa, type: 3}
+      propertyPath: m_text
+      value: LEVEL - 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

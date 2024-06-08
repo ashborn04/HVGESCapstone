@@ -96,6 +96,7 @@ public class BottleFlipper : MonoBehaviour
     private void Awake()
     {
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+         DontDestroyOnLoad(gameObject);
     }
 
     void Update()
