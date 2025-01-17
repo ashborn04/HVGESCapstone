@@ -406,6 +406,25 @@ EdgeCollider2D:
   m_AdjacentEndPoint: {x: 0, y: 0}
   m_UseAdjacentStartPoint: 0
   m_UseAdjacentEndPoint: 0
+--- !u!1 &817527404 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6819091273109968399, guid: b2ae063701c50b742ace7cdddbea650d, type: 3}
+  m_PrefabInstance: {fileID: 6983445492632924395}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &817527409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 817527404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00fd3be688ea59c43831169460c0919f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  platformSpeed: 1
+  platformRange: 1.5
 --- !u!1001 &834316511
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1430,11 +1449,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8178906327147286091, guid: b2ae063701c50b742ace7cdddbea650d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 8178906327147286091, guid: b2ae063701c50b742ace7cdddbea650d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 3.07
+      value: 3.43
       objectReference: {fileID: 0}
     - target: {fileID: 8178906327147286091, guid: b2ae063701c50b742ace7cdddbea650d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1471,7 +1490,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 6819091273109968399, guid: b2ae063701c50b742ace7cdddbea650d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 817527409}
   m_SourcePrefab: {fileID: 100100000, guid: b2ae063701c50b742ace7cdddbea650d, type: 3}
 --- !u!4 &7215904549993150120
 Transform:
